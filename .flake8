@@ -1,8 +1,5 @@
 [flake8]
 # 忽略指定错误码（E302/E305：空行问题；W292：文件末尾换行问题）
 ignore = E302,E305,W292
-# 注意：
-# 1) 本文件必须保存为「无 BOM 的 UTF-8」。带 BOM 时 flake8 会静默忽略整份配置，
-#    E302/E305 会重新冒出来，导致 Jenkins 的 Lint 阶段失败。
-# 2) 教程里的 `paths = app.py,tests/` 不是 flake8 的合法配置项（会被静默忽略），
-#    检查目标应该写在 Jenkinsfile 的命令里，所以这里删掉了。
+# 指定检查的文件/目录（可根据需求调整）
+paths = app.py,tests/

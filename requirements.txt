@@ -1,7 +1,6 @@
 # requirements.txt
 Flask==2.0.1
-Werkzeug==2.0.3  # 关键：锁定与Flask 2.0.1兼容的Werkzeug版本（Flask 2.0.1 需要 werkzeug.urls.url_quote，Werkzeug 3.x 已删除它）
+Werkzeug==2.0.3  # 关键：锁定与Flask 2.0.1兼容的Werkzeug版本
 pytest==7.4.3    # 升级pytest，解决Python 3.13的ast.Str警告
-pytest-cov==4.1.0  # 修复：Jenkinsfile 里用的是 pytest --cov=...，那是 pytest-cov 插件的参数，只装 coverage 会报 "unrecognized arguments: --cov"
 coverage==7.3.2  # 同步升级coverage，适配新pytest版本
 flake8==7.3.0
